@@ -74,9 +74,14 @@ const Services: React.FC = () => {
           <p className="text-text-dark/70 mb-8">
             Ready to start your journey with us?
           </p>
-          <button className="btn-primary">
+          <a
+            href="https://wa.link/qssmna"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary inline-block"
+          >
             Get Started Today
-          </button>
+          </a>
         </div>
       </div>
     </section>
