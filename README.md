@@ -1,6 +1,7 @@
 # Shahad Boutique Website
 
 A modern, elegant, and responsive website for Shahad Boutique, built with React, TypeScript, Tailwind CSS, and Vite.
+> **The website is currently live at: [https://www.shahadbynainci.com/](https://shahadbynainci.com/)**
 
 ## Features
 - Beautiful landing page with cultural and modern design
