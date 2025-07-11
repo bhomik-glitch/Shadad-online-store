@@ -51,14 +51,7 @@ function App() {
           element={
             <main>
               <Hero />
-              {/* Add homepage links to info pages */}
-              <nav className="my-8 flex flex-wrap gap-4 justify-center">
-                <Link to="/about-us" className="text-blue-600 underline">About Us</Link>
-                <Link to="/contact-us" className="text-blue-600 underline">Contact Us</Link>
-                <Link to="/privacy-policy" className="text-blue-600 underline">Privacy Policy</Link>
-                <Link to="/terms-conditions" className="text-blue-600 underline">Terms & Conditions</Link>
-                <Link to="/shipping-returns" className="text-blue-600 underline">Shipping & Returns</Link>
-              </nav>
+              {/* Homepage content */}
               <Shop />
               <About />
               <Services />
