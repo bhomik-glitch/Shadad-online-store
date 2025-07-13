@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-green to-secondary-green text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-secondary-green/30;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-accent-orange text-accent-orange px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent-orange hover:text-white focus:outline-none focus:ring-4 focus:ring-accent-orange/30;
+  }
+  
+  .section-heading {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl text-text-dark mb-6;
+  }
+  
+  .cultural-border {
+    position: relative;
+  }
+  
+  .cultural-border::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #D2691E, #7CB342);
+    border-radius: 2px;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ornament {
+  position: relative;
+}
+
+.ornament::after {
+  content: '❀';
+  position: absolute;
+  color: #D2691E;
+  opacity: 0.3;
+  font-size: 2rem;
+  animation: float 4s ease-in-out infinite;
+}
