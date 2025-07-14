@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, ReactNode } from 'react';
 
 const images = [
-  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752219126/3_kg87ea.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752506216/1_2_ehd623.jpg',
   'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752219126/2_mc9jcj.jpg',
   'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752219125/5_fmi35w.jpg',
   'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752219125/4_rotnnk.jpg',

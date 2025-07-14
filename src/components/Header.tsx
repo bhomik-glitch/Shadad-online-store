@@ -68,11 +68,8 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="Shahad Logo" className="h-12 w-12 rounded-full object-cover" />
-            <span className="font-serif text-2xl font-bold text-primary-green">Shahad</span>
-          </div>
+          {/* Logo removed */}
+          <div></div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
