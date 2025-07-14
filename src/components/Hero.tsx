@@ -15,6 +15,9 @@ const Hero: React.FC = () => {
               <span className="block text-accent-orange font-script text-6xl md:text-8xl lg:text-9xl mt-2">
                 Shahad
               </span>
+              <span className="block text-white/80 font-[Montserrat] text-2xl md:text-3xl lg:text-4xl mt-2">
+                by naincy tiwari
+              </span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-accent-orange to-secondary-green mx-auto mb-6"></div>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light leading-relaxed drop-shadow">
