@@ -26,7 +26,7 @@ const ProductDetail: React.FC = () => {
     if (!id) return;
     setLoading(true);
     setError(null);
-    fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`)
+    fetch(`http://localhost:5000/api/products/${id}`)
       .then(async res => {
         if (!res.ok) throw new Error('Failed to fetch product');
         try {
@@ -48,8 +48,8 @@ const ProductDetail: React.FC = () => {
       });
   }, [id]);
 
-  const goToPrev = () => setMainIdx(idx => Math.max(0, idx - 1));
-  const goToNext = () => setMainIdx(idx => product && product.images ? Math.min(product.images.length - 1, idx + 1) : 0);
+  const goToPrev = () => setMainIdx((idx: number) => Math.max(0, idx - 1));
+  const goToNext = () => setMainIdx((idx: number) => product && product.images ? Math.min(product.images.length - 1, idx + 1) : 0);
 
   const handleAddToCart = async () => {
     if (!id || !product) return;
@@ -128,7 +128,7 @@ const ProductDetail: React.FC = () => {
           </div>
           {/* Thumbnails */}
           <div className="hidden md:flex gap-2 mt-2">
-            {product.images && product.images.map((img, idx) => (
+            {product.images && product.images.map((img: string, idx: number) => (
               <button key={idx} onClick={() => { setMainIdx(idx); }} className={`w-16 h-16 rounded-lg border-2 ${mainIdx === idx ? 'border-accent-orange' : 'border-transparent'} overflow-hidden bg-neutral-100`}>
                 <img src={img} alt={`Thumb ${idx+1}`} className="object-contain w-full h-full" />
               </button>

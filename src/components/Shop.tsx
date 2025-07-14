@@ -22,7 +22,7 @@ const Shop: React.FC = () => {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
+    fetch(`http://localhost:5000/api/products`)
       .then(async res => {
         if (!res.ok) throw new Error('Failed to fetch products');
         try {
@@ -43,7 +43,7 @@ const Shop: React.FC = () => {
       });
   }, []);
 
-  const handleQuickAddToCart = async (productId: string, e: React.MouseEvent) => {
+  const handleQuickAddToCart = async (productId: string, e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setAddingToCart(productId);
@@ -106,7 +106,7 @@ const Shop: React.FC = () => {
         )}
         <div className="w-full flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {products.map((product, i) => (
+            {products.map((product: Product, i: number) => (
               <div key={product._id} className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 w-full h-full relative">
                 <Link to={`/product/${product._id}`} className="flex flex-col items-center w-full h-full">
                 <div className="w-48 h-64 flex items-center justify-center mb-4 bg-neutral-100 rounded-xl overflow-hidden">
@@ -119,23 +119,22 @@ const Shop: React.FC = () => {
                 </div>
                   <h3 className="text-lg font-bold mb-2 text-center">{product.title}</h3>
                   <p className="text-text-dark/70 text-center mb-2">₹{product.price}</p>
-                <button className="btn-secondary mt-2">View Details</button>
-              </Link>
-                {/* Quick Add to Cart Button */}
-                <button
-                  onClick={(e) => handleQuickAddToCart(product._id, e)}
-                  disabled={addingToCart === product._id}
-                  className={`absolute top-4 right-4 w-10 h-10 rounded-full bg-accent-orange text-white flex items-center justify-center hover:bg-orange-600 transition-colors ${
-                    addingToCart === product._id ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
-                  title="Add to cart"
-                >
-                  {addingToCart === product._id ? (
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                  ) : (
-                    '+'
-                  )}
-                </button>
+                  <button className="btn-secondary mt-2">View Details</button>
+                  <button
+                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleQuickAddToCart(product._id, e)}
+                    disabled={addingToCart === product._id}
+                    className={`absolute top-4 right-4 w-10 h-10 rounded-full bg-accent-orange text-white flex items-center justify-center hover:bg-orange-600 transition-colors ${
+                      addingToCart === product._id ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
+                    title="Add to cart"
+                  >
+                    {addingToCart === product._id ? (
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                    ) : (
+                      '+'
+                    )}
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -144,5 +143,5 @@ const Shop: React.FC = () => {
     </section>
   );
 };
-
-export default Shop; 
+  
+  export default Shop;

@@ -112,14 +112,14 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
-export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
+export const CartProvider: React.FC<CartProviderProps> = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(cartReducer, {
     items: [],
     loading: false,
     error: null
   });
 
-  const API_BASE_URL = import.meta.env.VITE_API_URL + '/api';
+  const API_BASE_URL = 'http://localhost:5000/api';
 
   const getAuthToken = () => {
     return localStorage.getItem('token');
@@ -267,11 +267,11 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const getTotalItems = () => {
-    return state.items.reduce((total, item) => total + item.quantity, 0);
+    return state.items.reduce((total: number, item: CartItem) => total + item.quantity, 0);
   };
 
   const getTotalPrice = () => {
-    return state.items.reduce((total, item) => {
+    return state.items.reduce((total: number, item: CartItem) => {
       const price = item.price || 0;
       return total + (price * item.quantity);
     }, 0);

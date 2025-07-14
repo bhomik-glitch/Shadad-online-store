@@ -1,39 +1,32 @@
 import React from 'react';
-import { Eye } from 'lucide-react';
+
+const IMAGES = [
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477354/IMG-20250714-WA0025_lv63hc.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477353/IMG-20250714-WA0024_uggrwu.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477353/IMG-20250714-WA0023_ztruqy.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477353/IMG-20250714-WA0023_ztruqy.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477351/IMG-20250714-WA0019_oio2m9.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477351/IMG-20250714-WA0038_ycnslh.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477348/IMG-20250714-WA0012_odmxup.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477347/IMG-20250714-WA0013_gtq6xm.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477346/IMG-20250714-WA0011_umskna.jpg',
+];
+
+const SECOND_ROW_IMAGES = [
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477346/IMG-20250714-WA0030_smrrcy.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477345/IMG-20250714-WA0026_smc1xf.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477345/IMG-20250714-WA0029_p4hk4n.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477344/IMG-20250714-WA0006_ij1aa4.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477347/IMG-20250714-WA0032_wuimjt.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477346/IMG-20250714-WA0009_ly3ijg.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752120891/IMG-20250702-WA0047_sfxj9q.jpg',
+  'https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477348/IMG-20250714-WA0034_lgcmyh.jpg',
+];
 
 const Gallery: React.FC = () => {
-  const galleryItems = [
-    {
-      title: 'Cultural Heritage',
-      category: 'Design',
-      image: 'https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Modern Elegance',
-      category: 'Architecture',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Artisan Crafts',
-      category: 'Products',
-      image: 'https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Cultural Events',
-      category: 'Experiences',
-      image: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Traditional Arts',
-      category: 'Heritage',
-      image: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Contemporary Fusion',
-      category: 'Innovation',
-      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-  ];
+  // Duplicate images for seamless infinite effect
+  const allImages = [...IMAGES, ...IMAGES];
+  const allSecondRow = [...SECOND_ROW_IMAGES, ...SECOND_ROW_IMAGES];
 
   return (
     <section id="gallery" className="py-20 bg-neutral-cream">
@@ -46,49 +39,51 @@ const Gallery: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryItems.map((item, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+        {/* First Row: Horizontal Infinite Image Slider with CSS animation */}
+        <div className="w-full overflow-x-hidden mb-8">
+          <div
+            className="flex gap-6 py-8 animate-marquee"
+            style={{ width: 'max-content' }}
+          >
+            {allImages.map((src, idx) => (
+              <div
+                key={idx}
+                className="min-w-[220px] h-56 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-neutral-200 select-none overflow-hidden"
+              >
                 <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  src={src}
+                  alt={`Gallery ${idx + 1}`}
+                  className="object-cover w-full h-full"
+                  draggable={false}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-text-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Overlay Content */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="text-center text-white">
-                    <Eye className="h-8 w-8 mx-auto mb-2" />
-                    <p className="text-sm font-medium">View Details</p>
-                  </div>
-                </div>
               </div>
-              
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-accent-orange uppercase tracking-wide">
-                    {item.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-serif font-semibold text-text-dark group-hover:text-primary-green transition-colors duration-300">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="text-center mt-12">
-          <button className="btn-secondary">
-            View Full Portfolio
-          </button>
+        {/* Second Row: User Provided Images */}
+        <div className="w-full overflow-x-hidden">
+          <div
+            className="flex gap-6 py-8 animate-marquee"
+            style={{ width: 'max-content' }}
+          >
+            {allSecondRow.map((src, idx) => (
+              <div
+                key={idx}
+                className="min-w-[220px] h-56 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-neutral-200 select-none overflow-hidden"
+              >
+                <img
+                  src={src}
+                  alt={`Gallery Second Row ${idx + 1}`}
+                  className="object-cover w-full h-full"
+                  draggable={false}
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Removed the View Full Portfolio button as requested */}
       </div>
     </section>
   );

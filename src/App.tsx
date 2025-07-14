@@ -55,7 +55,6 @@ function App() {
               <Shop />
               <About />
               <Services />
-              <Testimonials />
               <Gallery />
               <Contact />
             </main>
