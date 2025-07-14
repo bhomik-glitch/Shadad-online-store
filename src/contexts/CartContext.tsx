@@ -119,7 +119,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }: { childr
     error: null
   });
 
-  const API_BASE_URL = 'http://localhost:5000/api';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const getAuthToken = () => {
     return localStorage.getItem('token');

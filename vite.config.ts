@@ -9,6 +9,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
+      // For local development, proxy API requests to the backend
       '/api': 'http://localhost:5000',
     },
   },

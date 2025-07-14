@@ -22,7 +22,7 @@ const Shop: React.FC = () => {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(`http://localhost:5000/api/products`)
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/products`)
       .then(async res => {
         if (!res.ok) throw new Error('Failed to fetch products');
         try {
