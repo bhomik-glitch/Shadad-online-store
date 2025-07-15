@@ -100,7 +100,7 @@ const Header: React.FC = () => {
       <nav className="bg-white w-full shadow-sm border-b border-[#e5dbc7]">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-2 px-4">
           {/* Logo and Contact */}
-          <div className="flex items-center space-x-8 w-full md:w-auto justify-between md:justify-start">
+          <div className="flex w-full justify-center">
             <div className="flex items-center space-x-2">
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="Logo" className="h-12 w-12 rounded-full object-cover shadow-lg border-4 border-white bg-white" />
@@ -134,6 +134,7 @@ const Header: React.FC = () => {
       <div className="w-full border-t border-[#e5dbc7] bg-white">
         <div className="container mx-auto px-4">
           <ul className="flex flex-wrap justify-center items-center space-x-10 py-2 text-base font-medium">
+            <li className="relative group cursor-pointer"><span>Home</span></li>
             <li
               className="relative group cursor-pointer"
               onMouseEnter={handleClothingEnter}
@@ -232,11 +233,9 @@ const Header: React.FC = () => {
                 </div>
               )}
             </li>
-            <li className="relative group cursor-pointer"><span>Kurtas</span></li>
-            <li className="relative group cursor-pointer"><span>Home</span></li>
             <li className="relative group cursor-pointer"><span>Accessories</span></li>
             <li className="relative group cursor-pointer"><span>Artisans</span></li>
-            <li className="relative group cursor-pointer"><span>Rakhis and Gifts</span></li>
+            <li className="relative group cursor-pointer"><span>Shahad Special</span></li>
             <li className="relative group cursor-pointer text-red-600 font-semibold"><span>Sale</span></li>
           </ul>
             </div>
