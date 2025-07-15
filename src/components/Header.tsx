@@ -16,6 +16,9 @@ const Header: React.FC = () => {
   // Add state and ref for Sarees dropdown
   const [sareesDropdownOpen, setSareesDropdownOpen] = useState(false);
   const sareesDropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Add state and ref for Blouse dropdown
+  const [blouseDropdownOpen, setBlouseDropdownOpen] = useState(false);
+  const blouseDropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Remove Sarees dropdown state and handlers
 
   useEffect(() => {
@@ -92,6 +95,15 @@ const Header: React.FC = () => {
     sareesDropdownTimeout.current = setTimeout(() => setSareesDropdownOpen(false), 150);
   };
 
+  // Blouse dropdown handlers
+  const handleBlouseEnter = () => {
+    if (blouseDropdownTimeout.current) clearTimeout(blouseDropdownTimeout.current);
+    setBlouseDropdownOpen(true);
+  };
+  const handleBlouseLeave = () => {
+    blouseDropdownTimeout.current = setTimeout(() => setBlouseDropdownOpen(false), 150);
+  };
+
   // Remove Sarees dropdown handlers
 
   return (
@@ -104,7 +116,7 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-2">
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="Logo" className="h-12 w-12 rounded-full object-cover shadow-lg border-4 border-white bg-white" />
-                <span className="text-2xl font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>by naincy</span>
+                <span className="text-2xl font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>by NAINCI</span>
               </Link>
             </div>
             {/* Contact info removed */}
@@ -156,7 +168,7 @@ const Header: React.FC = () => {
                       <li><Link to="/shop" className="hover:underline">All Clothing</Link></li>
                       <li><Link to="/shop" className="hover:underline">New Arrivals</Link></li>
                       <li><Link to="/shop" className="hover:underline">Dresses & Jumpsuits</Link></li>
-                      <li><Link to="/shop" className="hover:underline">Kurtas & Kurta Sets</Link></li>
+                      <li><Link to="/shop" className="hover:underline">The Fabric</Link></li>
                       <li><Link to="/shop" className="hover:underline">Tops & Blouses</Link></li>
                       <li><Link to="/shop" className="hover:underline">Jackets & Blazers</Link></li>
                       <li><Link to="/shop" className="hover:underline">Co-ord Sets</Link></li>
@@ -171,8 +183,8 @@ const Header: React.FC = () => {
                   <div className="mr-12 min-w-[100px]">
                     <div className="font-semibold mb-2">Men</div>
                     <ul className="space-y-1 text-sm">
-                      <li><Link to="/shop" className="hover:underline">Kurtas</Link></li>
-                      <li><Link to="/shop" className="hover:underline">Ties</Link></li>
+                      <li><Link to="/shop" className="hover:underline">The Fabric</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Bottoms</Link></li>
                       <li><Link to="/shop" className="hover:underline">Shirts</Link></li>
                       <li><Link to="/shop" className="hover:underline">Shorts</Link></li>
                     </ul>
@@ -182,8 +194,6 @@ const Header: React.FC = () => {
                     <div className="font-semibold mb-2">Kids</div>
                     <ul className="space-y-1 text-sm">
                       <li><Link to="/shop" className="hover:underline">Kids Clothing</Link></li>
-                      <li><Link to="/shop" className="hover:underline">Furnishing</Link></li>
-                      <li><Link to="/shop" className="hover:underline">Kids Winterwear</Link></li>
                     </ul>
                   </div>
                   {/* Crafts */}
@@ -233,9 +243,36 @@ const Header: React.FC = () => {
                 </div>
               )}
             </li>
+            {/* Blouse dropdown with 4 boxes */}
+            <li
+              className="relative group cursor-pointer"
+              onMouseEnter={handleBlouseEnter}
+              onMouseLeave={handleBlouseLeave}
+            >
+              <span className={blouseDropdownOpen ? 'text-accent-orange font-semibold' : ''}>
+                Blouse <span className="ml-1">&#9662;</span>
+              </span>
+              {blouseDropdownOpen && (
+                <div
+                  className="absolute left-0 top-full mt-2 w-[400px] bg-white shadow-xl rounded-lg p-6 flex z-50 border border-gray-200"
+                  onMouseEnter={handleBlouseEnter}
+                  onMouseLeave={handleBlouseLeave}
+                >
+                  {/* 4 placeholder boxes for blouse images */}
+                  <div className="grid grid-cols-2 gap-4 w-full">
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0023_a88rak.jpg" alt="Blouse 1" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0022_dejdel.jpg" alt="Blouse 2" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0021_uxoe2x.jpg" alt="Blouse 3" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595965/IMG-20250715-WA0020_fd1c0r.jpg" alt="Blouse 4" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595965/IMG-20250715-WA0016_j70ajc.jpg" alt="Blouse 5" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                    <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0024_wcfcii.jpg" alt="Blouse 6" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
+                  </div>
+                </div>
+              )}
+            </li>
             <li className="relative group cursor-pointer"><span>Accessories</span></li>
             <li className="relative group cursor-pointer"><span>Artisans</span></li>
-            <li className="relative group cursor-pointer"><span>Shahad Special</span></li>
+            <li className="relative group cursor-pointer"><span>The Shahad story</span></li>
             <li className="relative group cursor-pointer text-red-600 font-semibold"><span>Sale</span></li>
           </ul>
             </div>
