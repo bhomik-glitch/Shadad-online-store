@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShoppingCart, Globe } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import homeIcon from '../assets/home-button-svgrepo-com.svg';
@@ -115,8 +115,8 @@ const Header: React.FC = () => {
           <div className="flex w-full justify-center">
             <div className="flex items-center space-x-2">
               <Link to="/" className="flex items-center space-x-2">
-                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full object-cover shadow-lg border-4 border-white bg-white" />
-                <span className="text-2xl font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>by NAINCI</span>
+                <img src={logo} alt="Logo" className="max-w-[48px] max-h-[48px] object-contain" />
+                <span className="text-lg font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>by Nainci</span>
               </Link>
             </div>
             {/* Contact info removed */}

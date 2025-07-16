@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <img src={logo} alt="Shahad Logo" className="h-12 w-12 rounded-full object-cover" />
-              <span className="font-serif text-2xl font-bold">Shahad</span>
+              <img src={logo} alt="Shahad Logo" className="max-w-[48px] max-h-[48px] object-contain" />
+              <span className="font-serif text-lg font-bold">Shahad</span>
             </div>
             <p className="text-white/80 leading-relaxed mb-6">
               Shahad by Nainci is a handcrafted clothing boutique that celebrates tradition with a modern twist. We specialize in beautifully designed handmade sarees and ethnic clothing, crafted with care and a deep love for Indian textile heritage.

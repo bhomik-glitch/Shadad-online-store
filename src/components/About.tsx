@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Star, Award, Users } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 
 const About: React.FC = () => {
   const features = [
@@ -75,7 +75,7 @@ const About: React.FC = () => {
             <div className="bg-gradient-to-br from-secondary-green/20 to-accent-orange/20 rounded-3xl p-8 h-96 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-4 border-accent-orange/10">
-                  <img src={logo} alt="Shahad Logo" className="w-32 h-32 object-cover rounded-full" />
+                  <img src={logo} alt="Shahad Logo" className="max-w-[128px] max-h-[128px] object-contain" />
                 </div>
                 <p className="text-text-dark font-medium text-lg">Shahad - Arabic for "Honey"</p>
                 <p className="text-text-dark/70 text-base mt-2">Sweetness in every experience</p>

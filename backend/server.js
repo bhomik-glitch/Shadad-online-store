@@ -26,4 +26,4 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 
-app.listen(process.env.PORT || 5000, 'localhost', () => console.log(`Server running on http://localhost:${process.env.PORT || 5000}`));
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => console.log(`Server running on http://0.0.0.0:${process.env.PORT || 5000}`));

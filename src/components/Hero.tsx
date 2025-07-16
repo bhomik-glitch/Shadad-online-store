@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
 import Slider from './Slider';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 
 const Hero: React.FC = () => {
   return (
@@ -10,10 +10,10 @@ const Hero: React.FC = () => {
       <Slider>
         <div className="relative container mx-auto px-6 flex flex-col items-center justify-center text-center animate-fade-in">
           {/* Centered Logo */}
-          <img src={logo} alt="Shahad Logo" className="h-40 w-40 md:h-56 md:w-56 rounded-full object-cover shadow-lg border-4 border-white bg-white mx-auto mb-4" />
+          <img src={logo} alt="Shahad Logo" className="max-w-[224px] max-h-[224px] object-contain mx-auto mb-4" />
           {/* Centered 'by naincy' */}
           <h1 className="font-script text-accent-orange text-5xl md:text-6xl lg:text-7xl font-bold mb-2 drop-shadow-lg">
-            <span className="block text-primary-green text-4xl md:text-5xl lg:text-6xl mt-2">by NAINCI</span>
+            <span className="block text-primary-green text-2xl md:text-3xl lg:text-4xl mt-2">by Nainci</span>
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-accent-orange to-secondary-green mx-auto mb-6"></div>
           {/* Centered Quotes */}
