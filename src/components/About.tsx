@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Star, Award, Users } from 'lucide-react';
-import logo from '../assets/logo-removebg-preview.png';
+import logo from '../assets/logo.png';
 
 const About: React.FC = () => {
   const features = [
