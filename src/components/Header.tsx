@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShoppingCart, Globe } from 'lucide-react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-removebg-preview.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import homeIcon from '../assets/home-button-svgrepo-com.svg';
@@ -113,9 +113,10 @@ const Header: React.FC = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-2 px-4">
           {/* Logo and Contact */}
           <div className="flex w-full justify-center">
-            <div className="flex items-center space-x-2">
-              <Link to="/" className="flex items-center space-x-2">
-                <img src={logo} alt="Logo" className="max-w-[48px] max-h-[48px] object-contain" />
+            <div className="flex flex-col items-center">
+              <Link to="/" className="flex flex-col items-center">
+                <img src={logo} alt="Logo" className="max-w-[80px] max-h-[80px] object-contain mb-1" />
+                <span className="text-lg font-bold" style={{ fontFamily: 'Dancing Script, cursive' }}>by Nainci</span>
               </Link>
             </div>
             {/* Contact info removed */}
@@ -176,6 +177,12 @@ const Header: React.FC = () => {
                       <li><Link to="/shop" className="hover:underline">Bottom Wear</Link></li>
                       <li><Link to="/shop" className="hover:underline">Dupattas, Scarfs & Stoles</Link></li>
                       <li><Link to="/shop" className="hover:underline">Night Suits</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Kurtas</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Anarkalis</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Lehengas</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Gowns</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Palazzos</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Shararas</Link></li>
                     </ul>
                   </div>
                   {/* Men */}
