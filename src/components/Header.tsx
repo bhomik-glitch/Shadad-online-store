@@ -63,24 +63,15 @@ const Header: React.FC = () => {
       {/* Main Bar */}
       <nav className="bg-white w-full shadow-sm border-b border-[#e5dbc7]">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-2 px-4">
-          {/* Logo and Contact */}
-          <div className="flex w-full justify-center md:justify-start">
-            <div className="flex flex-col items-center">
-              <Link to="/" className="flex flex-col items-center">
-                <img src={logo} alt="Logo" className="max-w-[80px] max-h-[80px] object-contain mb-1" />
-                <span className="text-lg font-bold" style={{ fontFamily: 'Inter, sans-serif' }}>by Nainci</span>
-              </Link>
-            </div>
-            {/* Contact info removed */}
+          {/* Header Bar: Three columns for centering */}
+          <div className="hidden md:flex flex-1"></div>
+          <div className="flex flex-col items-center">
+            <Link to="/" className="flex flex-col items-center">
+              <img src={logo} alt="Logo" className="max-w-[80px] max-h-[80px] object-contain mb-1" />
+              <span className="text-lg font-bold" style={{ fontFamily: 'Inter, sans-serif' }}>by Nainci</span>
+            </Link>
           </div>
-          {/* Hamburger Icon for mobile */}
-          <div className="flex md:hidden absolute right-4 top-6 z-50">
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
-              {mobileMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-            </button>
-          </div>
-          {/* Icons (always visible) */}
-          <div className="flex items-center space-x-4 text-[#6b5e4e] md:static absolute left-4 top-6">
+          <div className="flex items-center space-x-4 text-[#6b5e4e] md:flex-1 md:justify-end md:static absolute left-4 top-6">
             <Link to="/" className="hover:text-accent-orange">
               <img src={homeIcon} alt="Home" className="h-5 w-5" />
             </Link>
@@ -97,6 +88,12 @@ const Header: React.FC = () => {
                 </span>
               )}
             </Link>
+          </div>
+          {/* Hamburger Icon for mobile */}
+          <div className="flex md:hidden absolute right-4 top-6 z-50">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+              {mobileMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+            </button>
           </div>
         </div>
       </nav>
