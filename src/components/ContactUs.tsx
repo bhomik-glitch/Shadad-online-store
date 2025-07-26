@@ -16,7 +16,7 @@ const ContactUs = () => (
     </ul>
     <h2 className="text-xl font-semibold mb-2">Principal Place of Business:</h2>
     <address className="not-italic">
-      Flat No 409, Dwarikam Greens,<br />
+      D-50, Dwarikam Greens,<br />
       Near A.K.S. University, Sherganj,<br />
       Satna, Madhya Pradesh – 485001
     </address>

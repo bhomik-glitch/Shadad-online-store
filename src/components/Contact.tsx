@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: 'FLAT NO 409, Dwarikam Greens, NEAR A.K.S. UNIVERSITY, SATNA',
+      details: 'D-50, Dwarikam Greens, NEAR A.K.S. UNIVERSITY, SATNA',
       description: 'Sherganj, Satna, Madhya Pradesh, 485001',
     },
   ];

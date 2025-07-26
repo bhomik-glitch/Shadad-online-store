@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center text-white/80 mt-2">
                 <MapPin className="h-4 w-4 mr-2 text-accent-orange" />
-                <span className="text-sm">Flat No 409, Dwarikam Greens, Near A.K.S. University, Sherganj, Satna, Madhya Pradesh – 485001</span>
+                <span className="text-sm">D-50, Dwarikam Greens, Near A.K.S. University, Sherganj, Satna, Madhya Pradesh – 485001</span>
               </div>
             </div>
           </div>
