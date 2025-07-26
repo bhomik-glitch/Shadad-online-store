@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center text-white/80">
                 <Mail className="h-4 w-4 mr-2 text-accent-orange" />
-                <span className="text-sm"><a href="mailto:shahadnainci@rediffmail.com" className="hover:underline">shahadnainci@rediffmail.com</a></span>
+                <span className="text-sm"><a href="mailto:shahadnainci@gmail.com" className="hover:underline">shahadnainci@gmail.com</a></span>
               </div>
               <div className="flex items-center text-white/80 mt-2">
                 <Phone className="h-4 w-4 mr-2 text-accent-orange" />

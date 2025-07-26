@@ -4,7 +4,7 @@ const ContactUs = () => (
   <section className="max-w-2xl mx-auto p-6 mt-24">
     <h1 className="text-3xl font-bold mb-4">We’d Love to Hear From You</h1>
     <ul className="mb-4">
-      <li>📧 Email: <a href="mailto:shahadnainci@rediffmail.com" className="text-blue-600 underline">shahadnainci@rediffmail.com</a></li>
+      <li>📧 Email: <a href="mailto:shahadnainci@gmail.com" className="text-blue-600 underline">shahadnainci@gmail.com</a></li>
       <li>📞 Phone: <a href="tel:+919893848769" className="text-blue-600 underline">+91 98938 48769</a></li>
       <li>🌐 Facebook: <a href="https://facebook.com/siaanainci" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">facebook.com/siaanainci</a></li>
     </ul>
