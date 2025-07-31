@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '../assets/logo-removebg-preview.png';
+import logo from '../assets/new-logo.png';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ShoppingCart } from 'lucide-react';
-import logo from '../assets/logo-removebg-preview.png';
+import logo from '../assets/new-logo.png';
 import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import homeIcon from '../assets/home-button-svgrepo-com.svg';
@@ -67,8 +67,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex flex-1"></div>
           <div className="flex flex-col items-center">
             <Link to="/" className="flex flex-col items-center">
-              <img src={logo} alt="Logo" className="max-w-[80px] max-h-[80px] object-contain mb-1" />
-              <span className="text-lg font-bold" style={{ fontFamily: 'Inter, sans-serif' }}>by Nainci</span>
+              <img src={logo} alt="Logo" className="max-w-[100px] max-h-[100px] object-contain" />
             </Link>
           </div>
           <div className="flex items-center space-x-4 text-[#6b5e4e] md:flex-1 md:justify-end md:static absolute left-4 top-6">

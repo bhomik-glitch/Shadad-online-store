@@ -125,6 +125,116 @@ As this is a handcrafted, handblock printed product, slight variations in design
     ],
     stock: 11,
   },
+  // Product 8
+  {
+    title: 'Bhujodi Handwoven Kala Cotton Dress Material – Steel blue (3pc Set)',
+    description: `Product Highlights
+
+🔁 Exchange Only – No refunds. Exchange allowed only with unboxing video
+
+✅ Free & Easy Exchange Process
+
+🚚 Free Shipping & Secure Payments 
+
+🧵 100% Pure Cotton Fibre – Handwoven from eco-friendly kala cotton
+
+🎨 Artisanal Craft – Mirror work & traditional Bhujodi weaving
+
+---
+
+Product Description
+
+Celebrate the timeless artistry of Bhujodi with this elegant 3-piece dress material set in a rich purple tone. Handwoven by skilled artisans using pure kala cotton, the set includes:
+
+Kurta – 2.5 meters in length, 93 cm width
+
+Bottom – 2.15 meters in length, 93 cm width
+
+Dupatta – 2.4 meters in length, 95 cm width
+
+Adorned with intricate woven patterns and delicate mirror embellishments, this set is perfect for festive occasions, cultural gatherings, or graceful daily wear. The breathable and soft texture offers both comfort and style.
+
+---
+
+Product Details
+
+Material: 100% Pure Kala Cotton
+
+Weight: Approx. 815 grams
+
+Colour: steel blue color 
+(Note: Slight color variation from the image may occur due to lighting and display settings)
+
+Care: Gentle hand wash separately in cold water with mild or liquid detergent. Avoid soaking.
+
+---
+
+Return & Exchange Policy
+
+🚫 No Refunds
+
+🔁 Exchange available only with full unboxing video sent within 24 hours of delivery`,
+    price: 9300,
+    images: [
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937555/IMG-20250722-WA0024_mofjlx.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937551/IMG-20250722-WA0022_mhtecu.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937546/IMG-20250722-WA0023_hafzej.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937544/IMG-20250722-WA0025_nog3mw.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937542/IMG-20250722-WA0019_ujzlqu.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753937540/IMG-20250722-WA0020_pj6onx.jpg',
+    ],
+    stock: 15,
+  },
+  // Product 9
+  {
+    title: 'Bhujodi Handwoven Kala Cotton Dress Material – Red with beautiful Duptta (3pc Set)',
+    description: `Product Highlights
+
+🔁 Exchange Only – No refunds. Exchange allowed only with unboxing video
+
+✅ Free & Easy Exchange Process
+
+🚚 Free Shipping & Secure Payments 
+
+🧵 100% Pure Cotton Fibre – Handwoven from eco-friendly kala cotton
+
+🎨 Artisanal Craft – Mirror work & traditional Bhujodi weaving
+
+---
+
+Product Description
+
+Celebrate the timeless artistry of Bhujodi with this elegant 3-piece dress material set in a rich purple tone. Handwoven by skilled artisans using pure kala cotton, the set includes:
+
+Kurta – 2.5 meters in length, 93 cm width
+
+Bottom – 2.15 meters in length, 93 cm width
+
+Dupatta – 2.4 meters in length, 95 cm width
+
+Adorned with intricate woven patterns and delicate mirror embellishments, this set is perfect for festive occasions, cultural gatherings, or graceful daily wear. The breathable and soft texture offers both comfort and style.
+
+---
+
+Product Details
+
+Material: 100% Pure Kala Cotton
+
+Weight: Approx. 815 grams
+
+Colour: Red with beautiful Duptta color 
+(Note: Slight color variation from the image may occur due to lighting and display settings)
+
+Care: Gentle hand wash separately in cold water with mild or liquid detergent. Avoid soaking.`,
+    price: 9300,
+    images: [
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753939280/IMG-20250722-WA0027_mexu8w.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753939279/IMG-20250722-WA0028_i80dmk.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753939255/IMG-20250722-WA0029_zihy1a.jpg',
+      'https://res.cloudinary.com/dn3k5szqx/image/upload/v1753939229/IMG-20250722-WA0026_ftsqaw.jpg',
+    ],
+    stock: 12,
+  },
 ];
 
 // Fill in the correct images and stock for products 2-6
