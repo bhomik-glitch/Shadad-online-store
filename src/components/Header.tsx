@@ -113,7 +113,7 @@ const Header: React.FC = () => {
               </span>
               {clothingDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-[800px] bg-white shadow-xl rounded-lg p-8 flex z-50 border border-gray-200"
+                  className="absolute left-0 top-full mt-2 w-[800px] bg-white shadow-xl rounded-lg p-8 flex z-50 border border-gray-200 overflow-hidden"
                   onMouseEnter={handleClothingEnter}
                   onMouseLeave={handleClothingLeave}
                 >
@@ -191,12 +191,22 @@ const Header: React.FC = () => {
               </span>
               {sareesDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-[400px] bg-white shadow-xl rounded-lg p-6 flex z-50 border border-gray-200"
+                  className="absolute left-0 top-full mt-2 w-[600px] bg-white shadow-xl rounded-lg p-6 flex z-50 border border-gray-200 overflow-hidden"
                   onMouseEnter={handleSareesEnter}
                   onMouseLeave={handleSareesLeave}
                 >
-                  {/* 4 saree images */}
-                  <div className="grid grid-cols-2 gap-4 w-full">
+                  {/* Left side: text links */}
+                  <div className="w-1/2 pr-6">
+                    <ul className="space-y-3 text-sm">
+                      <li><Link to="/sarees?type=kota" className="hover:underline">Kota</Link></li>
+                      <li><Link to="/sarees?type=cotton" className="hover:underline">Cotton</Link></li>
+                      <li><Link to="/sarees?type=silk" className="hover:underline">Silk</Link></li>
+                      <li><Link to="/sarees?type=silk-and-cotton" className="hover:underline">Silk and Cotton</Link></li>
+                      <li><Link to="/sarees?type=wool" className="hover:underline">Wool</Link></li>
+                    </ul>
+                  </div>
+                  {/* Right side: 4 saree images */}
+                  <div className="grid grid-cols-2 gap-4 w-1/2">
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477354/IMG-20250714-WA0025_lv63hc.jpg" alt="Saree 1" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477353/IMG-20250714-WA0024_uggrwu.jpg" alt="Saree 2" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752477346/IMG-20250714-WA0011_umskna.jpg" alt="Saree 3" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
@@ -216,12 +226,20 @@ const Header: React.FC = () => {
               </span>
               {blouseDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-[400px] bg-white shadow-xl rounded-lg p-6 flex z-50 border border-gray-200"
+                  className="absolute left-0 top-full mt-2 w-[600px] bg-white shadow-xl rounded-lg p-6 flex z-50 border border-gray-200 overflow-hidden"
                   onMouseEnter={handleBlouseEnter}
                   onMouseLeave={handleBlouseLeave}
                 >
-                  {/* 4 placeholder boxes for blouse images */}
-                  <div className="grid grid-cols-2 gap-4 w-full">
+                  {/* Left side: text links */}
+                  <div className="w-1/2 pr-6">
+                    <ul className="space-y-3 text-sm">
+                      <li><Link to="/blouse?type=piece" className="hover:underline">blouse piece</Link></li>
+                      <li><Link to="/blouse?type=stitched" className="hover:underline">stitched blouse</Link></li>
+                      <li><Link to="/blouse?type=karigari" className="hover:underline">karigari blouse</Link></li>
+                    </ul>
+                  </div>
+                  {/* Right side: 4 blouse images */}
+                  <div className="grid grid-cols-2 gap-4 w-1/2">
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0023_a88rak.jpg" alt="Blouse 1" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0022_dejdel.jpg" alt="Blouse 2" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
                     <img src="https://res.cloudinary.com/dn3k5szqx/image/upload/v1752595966/IMG-20250715-WA0021_uxoe2x.jpg" alt="Blouse 3" className="h-32 w-32 object-cover rounded-lg border border-gray-300" />
@@ -241,7 +259,7 @@ const Header: React.FC = () => {
               </span>
               {fabricDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-48 bg-white shadow-xl rounded-lg p-4 z-50 border border-gray-200"
+                  className="absolute left-0 top-full mt-2 w-48 bg-white shadow-xl rounded-lg p-4 z-50 border border-gray-200 overflow-hidden"
                   onMouseEnter={handleFabricEnter}
                   onMouseLeave={handleFabricLeave}
                 >
@@ -251,12 +269,14 @@ const Header: React.FC = () => {
                     <li><Link to="/fabric?type=silk" className="hover:underline">Silk</Link></li>
                     <li><Link to="/fabric?type=silk-and-cotton" className="hover:underline">Silk and Cotton</Link></li>
                     <li><Link to="/fabric?type=wool" className="hover:underline">Wool</Link></li>
+                    <li><Link to="/fabric?type=3-piece-suit" className="hover:underline">3 Piece suit</Link></li>
+                    <li><Link to="/fabric?type=2-piece-suit" className="hover:underline">2 Piece Suit</Link></li>
                   </ul>
                 </div>
               )}
             </li>
             <li className="relative group cursor-pointer"><span>Accessories</span></li>
-            <li className="relative group cursor-pointer"><span>Artisans</span></li>
+            <li className="relative group cursor-pointer"><span>Shadad Living</span></li>
             <li className="relative group cursor-pointer"><span>The Shahad story</span></li>
             <li className="relative group cursor-pointer text-red-600 font-semibold"><span>Sale</span></li>
           </ul>
@@ -306,8 +326,12 @@ const Header: React.FC = () => {
             </button>
             {sareesDropdownOpen && (
               <div className="pl-4 pt-2 space-y-1">
-                {/* Add saree links or images as needed */}
                 <span className="block text-gray-500">Saree Gallery</span>
+                <Link to="/sarees?type=kota" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Kota</Link>
+                <Link to="/sarees?type=cotton" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Cotton</Link>
+                <Link to="/sarees?type=silk" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk</Link>
+                <Link to="/sarees?type=silk-and-cotton" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk and Cotton</Link>
+                <Link to="/sarees?type=wool" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Wool</Link>
               </div>
             )}
           </div>
@@ -320,6 +344,9 @@ const Header: React.FC = () => {
             {blouseDropdownOpen && (
               <div className="pl-4 pt-2 space-y-1">
                 <span className="block text-gray-500">Blouse Gallery</span>
+                <Link to="/blouse?type=piece" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>blouse piece</Link>
+                <Link to="/blouse?type=stitched" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>stitched blouse</Link>
+                <Link to="/blouse?type=karigari" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>karigari blouse</Link>
               </div>
             )}
           </div>
@@ -336,11 +363,13 @@ const Header: React.FC = () => {
                 <Link to="/fabric?type=silk" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk</Link>
                 <Link to="/fabric?type=silk-and-cotton" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk and Cotton</Link>
                 <Link to="/fabric?type=wool" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Wool</Link>
+                <Link to="/fabric?type=3-piece-suit" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>3 Piece suit</Link>
+                <Link to="/fabric?type=2-piece-suit" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>2 Piece Suit</Link>
               </div>
             )}
           </div>
           <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Accessories</Link>
-          <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Artisans</Link>
+          <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Shadad Living</Link>
           <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>The Shahad story</Link>
           <Link to="/shop" className="hover:text-red-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Sale</Link>
         </div>

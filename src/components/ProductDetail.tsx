@@ -31,7 +31,7 @@ const ProductDetail: React.FC = () => {
         if (!res.ok) throw new Error('Failed to fetch product');
         try {
           return await res.json();
-        } catch (err) {
+        } catch {
           const text = await res.text();
           console.error('Failed to parse JSON. Response was:', text);
           throw new Error('Invalid JSON from server');
