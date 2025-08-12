@@ -67,8 +67,8 @@ const Header: React.FC = () => {
           <div className="hidden md:flex flex-1"></div>
           <div className="flex flex-col items-center">
             <Link to="/" className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-primary-green/20 shadow-lg bg-white flex items-center justify-center">
-                <img src={logo} alt="Logo" className="w-20 h-20 object-cover rounded-full" />
+              <div className="w-24 h-24 rounded-lg overflow-hidden border-4 border-primary-green/20 shadow-lg bg-white flex items-center justify-center">
+                <img src={logo} alt="Logo" className="w-20 h-20 object-cover rounded-lg" />
               </div>
             </Link>
           </div>
@@ -166,7 +166,7 @@ const Header: React.FC = () => {
                     <ul className="space-y-1 text-sm">
                       <li><Link to="/shop" className="hover:underline">Hand Embroidered</Link></li>
                       <li><Link to="/shop" className="hover:underline">Ikat</Link></li>
-                      <li><Link to="/shop" className="hover:underline">Suf Embroidery</Link></li>
+                      <li><Link to="/shop" className="hover:underline">Soof Embroidery</Link></li>
                       <li><Link to="/shop" className="hover:underline">Ajrakh</Link></li>
                       <li><Link to="/shop" className="hover:underline">Neela - Indigo</Link></li>
                       <li><Link to="/shop" className="hover:underline">Mirror Work</Link></li>
@@ -204,7 +204,9 @@ const Header: React.FC = () => {
                       <li><Link to="/sarees?type=cotton" className="hover:underline">Cotton</Link></li>
                       <li><Link to="/sarees?type=silk" className="hover:underline">Silk</Link></li>
                       <li><Link to="/sarees?type=silk-and-cotton" className="hover:underline">Silk and Cotton</Link></li>
-                      <li><Link to="/sarees?type=wool" className="hover:underline">Wool</Link></li>
+                      <li><Link to="/sarees?type=modal-silk" className="hover:underline">Modal Silk</Link></li>
+                      <li><Link to="/sarees?type=ajarakh" className="hover:underline">Ajarakh</Link></li>
+                      <li><Link to="/sarees?type=chikankari" className="hover:underline">Chikankari</Link></li>
                     </ul>
                   </div>
                   {/* Right side: 4 saree images */}
@@ -278,7 +280,7 @@ const Header: React.FC = () => {
               )}
             </li>
             <li className="relative group cursor-pointer"><span>Accessories</span></li>
-            <li className="relative group cursor-pointer"><span>Shadad Living</span></li>
+            <li className="relative group cursor-pointer"><span>Shahad Living</span></li>
             <li className="relative group cursor-pointer"><span>The Shahad story</span></li>
             <li className="relative group cursor-pointer text-red-600 font-semibold"><span>Sale</span></li>
           </ul>
@@ -333,7 +335,9 @@ const Header: React.FC = () => {
                 <Link to="/sarees?type=cotton" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Cotton</Link>
                 <Link to="/sarees?type=silk" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk</Link>
                 <Link to="/sarees?type=silk-and-cotton" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Silk and Cotton</Link>
-                <Link to="/sarees?type=wool" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Wool</Link>
+                <Link to="/sarees?type=modal-silk" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Modal Silk</Link>
+                <Link to="/sarees?type=ajarakh" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Ajarakh</Link>
+                <Link to="/sarees?type=chikankari" className="block hover:underline" onClick={() => setMobileMenuOpen(false)}>Chikankari</Link>
               </div>
             )}
           </div>
@@ -371,7 +375,7 @@ const Header: React.FC = () => {
             )}
           </div>
           <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Accessories</Link>
-          <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Shadad Living</Link>
+          <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>Shahad Living</Link>
           <Link to="/shop" className="hover:text-accent-orange" onClick={() => setMobileMenuOpen(false)}>The Shahad story</Link>
           <Link to="/shop" className="hover:text-red-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Sale</Link>
         </div>

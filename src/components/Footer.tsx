@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/30 shadow-md bg-white/10 flex items-center justify-center">
-                <img src={logo} alt="Shahad Logo" className="w-10 h-10 object-cover rounded-full" />
+              <div className="w-12 h-12 rounded-lg overflow-hidden border-2 border-white/30 shadow-md bg-white/10 flex items-center justify-center">
+                <img src={logo} alt="Shahad Logo" className="w-10 h-10 object-cover rounded-lg" />
               </div>
               <span className="font-serif text-lg font-bold">Shahad</span>
             </div>
