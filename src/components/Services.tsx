@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Coffee, Calendar, Gift } from 'lucide-react';
+import { Palette, Gift } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -34,8 +34,11 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-neutral-cream rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 overflow-hidden animate-slide-up"
+              className={`group relative bg-neutral-cream rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 overflow-hidden animate-slide-up ${
+                service.title === 'Custom Stitching' ? 'cursor-pointer' : ''
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={service.title === 'Custom Stitching' ? () => window.location.href = '/custom-stitching' : undefined}
             >
               {/* Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
@@ -62,9 +65,15 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
                 
-                <button className="mt-6 text-accent-orange font-semibold hover:text-primary-green transition-colors duration-300">
-                  Learn More →
-                </button>
+                {service.title === 'Custom Stitching' ? (
+                  <span className="mt-6 text-accent-orange font-semibold hover:text-primary-green transition-colors duration-300 inline-block">
+                    Learn More →
+                  </span>
+                ) : (
+                  <button className="mt-6 text-accent-orange font-semibold hover:text-primary-green transition-colors duration-300">
+                    Learn More →
+                  </button>
+                )}
               </div>
             </div>
           ))}

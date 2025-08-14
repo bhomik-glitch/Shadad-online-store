@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Shop from './components/Shop';
 import ProductDetail from './components/ProductDetail';
+import CustomStitching from './components/CustomStitching';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Cart from './components/Cart';
@@ -67,7 +68,8 @@ function App() {
         <Route path="/shipping-returns" element={<ShippingReturns />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
+        <Route path="/custom-stitching" element={<CustomStitching />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
