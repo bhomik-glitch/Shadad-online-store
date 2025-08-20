@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ShoppingCart } from 'lucide-react';
-import logo from '../assets/WhatsApp Image 2025-08-02 at 15.01.32_bc63c5c0.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import homeIcon from '../assets/home-button-svgrepo-com.svg';
@@ -67,9 +67,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex flex-1"></div>
           <div className="flex flex-col items-center">
             <Link to="/" className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-lg overflow-hidden border-4 border-primary-green/20 shadow-lg bg-white flex items-center justify-center">
-                <img src={logo} alt="Logo" className="w-20 h-20 object-cover rounded-lg" />
-              </div>
+              <img src={logo} alt="Logo" className="w-20 h-20 object-contain" />
             </Link>
           </div>
           <div className="flex items-center space-x-4 text-[#6b5e4e] md:flex-1 md:justify-end md:static absolute left-4 top-6">

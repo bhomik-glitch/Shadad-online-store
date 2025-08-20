@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Star, Award, Users } from 'lucide-react';
-import logo from '../assets/WhatsApp Image 2025-08-02 at 15.01.32_bc63c5c0.jpg';
+import logo from '../assets/logo-removebg-preview.png';
 
 const About: React.FC = () => {
   const features = [
@@ -74,9 +74,7 @@ const About: React.FC = () => {
           <div className="relative animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <div className="bg-gradient-to-br from-secondary-green/20 to-accent-orange/20 rounded-3xl p-8 h-96 flex items-center justify-center">
               <div className="text-center">
-                              <div className="w-32 h-32 bg-white rounded-lg flex items-center justify-center mx-auto mb-6 shadow-2xl border-4 border-accent-orange/10">
-                <img src={logo} alt="Shahad Logo" className="w-28 h-28 object-cover rounded-lg" />
-              </div>
+                <img src={logo} alt="Shahad Logo" className="w-28 h-28 object-contain mx-auto mb-6" />
                 <p className="text-text-dark font-medium text-lg">Shahad - Arabic for "Honey"</p>
                 <p className="text-text-dark/70 text-base mt-2">Sweetness in every experience</p>
               </div>
